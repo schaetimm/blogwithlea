@@ -66,6 +66,9 @@ ul{
     min-height: 10vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
+    border-radius: 80px;
+    line-height: 50px;
+    width: 80%;
 }
 
 .nav .nav-menu{    
@@ -89,10 +92,14 @@ ul{
 
 .nav .nav-items .nav-link:hover{
     background-color: var(--midnight);
+    border-radius: auto;
+    transition: 0.1s ease-in-out;
+    line-height: 5px;
 }
 
 .nav .nav-items .nav-link:hover a{
     color: var(--white);
+    
 }
 
 .nav .nav-brand a{
@@ -101,6 +108,7 @@ ul{
     display: block;
     font-family: var(--Lexend);
     font-size: 1.6rem;
+    
 }
 
 .nav .social{
