@@ -79,7 +79,7 @@ ul{
 }
 .nav .nav-items .nav-link:hover{
     
-    background-color: var(--midnight);
+    /* background-color: var(--midnight); */
 }
 
 .nav .nav-items .nav-link:hover a{
