@@ -18,6 +18,7 @@ html, body{
     --bg-color: #0f0f0f;
     --white: #ffffff;
     --midnight: #104f55;
+    --orange-nav: #FC8933;
 
     /* gradient color   */
     --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -41,6 +42,7 @@ a{
     display: flex;
     flex-direction: row;    
     flex-wrap: wrap;
+    
 }
 
 ul{
@@ -67,12 +69,13 @@ ul{
     overflow: hidden;
     transition: height 1s ease-in-out;
     border-radius: 80px;
-    line-height: 50px;
+    line-height: 10px;
     width: 80%;
 }
 
 .nav .nav-menu{    
     justify-content: space-between;
+    
 }
 
 
@@ -83,7 +86,7 @@ ul{
 }
 
 .nav .nav-items .nav-link{
-    padding: 1.6rem 1rem;
+    padding: 1.6rem 2rem;
     font-size: 1.1rem;
     position: relative;
     font-family: var(--Abel);
@@ -91,10 +94,10 @@ ul{
 }
 
 .nav .nav-items .nav-link:hover{
-    background-color: var(--midnight);
-    border-radius: auto;
-    transition: 0.1s ease-in-out;
-    line-height: 5px;
+    background-color: var(--orange-nav);
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    line-height: 1px;
 }
 
 .nav .nav-items .nav-link:hover a{
@@ -116,7 +119,7 @@ ul{
 }
 
 .nav .social i{
-    padding: 0 .2rem;
+    padding: 0.5rem;
 }
 
 .nav .social i:hover{
