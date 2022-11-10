@@ -129,6 +129,7 @@ ul{
 }
 .btn {
     border-radius: 10px;
+    font-size: 1.1rem;
     
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.7);
