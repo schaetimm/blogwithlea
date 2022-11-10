@@ -21,9 +21,9 @@ app.post('/uploads', (req, res) => {
     let file = req.files.images;
     let date = new Date();
     // image name
-    let imagesname = date.getDate() + date.getTime() + file.name;
+    let imagename = date.getDate() + date.getTime() + file.name;
     // image upload path
-    let path = '/uploads' + imagesname;
+    let path = '/uploads' + imagename;
 
     // create upload
     file.mv(path, (err, result) => {
@@ -31,7 +31,7 @@ app.post('/uploads', (req, res) => {
             throw err;
         } else{
             // our image upload path
-            res.json(`uploads/${imagesname}`)
+            res.json(`uploads/${imagename}`)
         }
     })
 })
