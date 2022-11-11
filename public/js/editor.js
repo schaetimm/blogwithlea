@@ -14,21 +14,21 @@ bannerImage.addEventListener('change', () => {
 })
 
 uploadInput.addEventListener('change', () => {
-    uploadImage(uploadInput, "images");
+    uploadImage(uploadInput, "image");
 })
 
 const uploadImage = (uploadFile, uploadType) => {
     const [file] = uploadFile.files;
-    if(file && file.type.includes("images")){
+    if(file && file.type.includes("image")){
         const formdata = new FormData();
-        formdata.append('images', file);
+        formdata.append('image', file);
 
-        fetch('/uploads', {
+        fetch('/upload', {
             method: 'post',
             body: formdata
         }).then(res => res.json())
         .then(data => {
-            if(uploadType == "images"){
+            if(uploadType == "image"){
                 addImage(data, file.name);
             } else{
                 bannerPath = `${location.origin}/${data}`;
@@ -39,4 +39,3 @@ const uploadImage = (uploadFile, uploadType) => {
         alert("upload Image only");
     }
 }
-

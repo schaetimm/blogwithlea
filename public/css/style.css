@@ -1,7 +1,7 @@
 
 
 
-@import url('../css/fonts.css');
+@import url('fonts.css');
 
 
 html, body{
@@ -63,7 +63,7 @@ ul{
 
 .nav{
     background: white;
-    padding: 0 7vw;
+    padding: 0 9vw;
     height: 60px;
     min-height: 10vh;
     overflow: hidden;
