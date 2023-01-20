@@ -1,9 +1,9 @@
 @font-face {
     font-family: Abel;
-    src: url('../fonts/Abel,Josefin_Sans/Abel/Abel-Regular.ttf');
+    src: url('/fonts/Abel,Josefin_Sans/Abel/Abel-Regular.ttf');
 }
 
 @font-face {
     font-family: Josefin_Sans;
-    src: url('../fonts/Abel,Josefin_Sans/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf');
+    src: url('/fonts/Abel,Josefin_Sans/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf');
 }

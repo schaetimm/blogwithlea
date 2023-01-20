@@ -1,23 +1,37 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
-import { getAuth } from "firebase/auth";
+const firebase = require("firebase/app");
+const getFirestore = require("firebase/firestore");
+const getStorage = require("firebase/storage");
+const getAuth = require("firebase/auth");
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-   apiKey: "AIzaSyAjpjwajwwykwhni9kvBsz3HSdpXrfTass",
-   authDomain: "lo-blogs.firebaseapp.com",
-   projectId: "lo-blogs",
-   storageBucket: "lo-blogs.appspot.com",
-   messagingSenderId: "351906388126",
-   appId: "1:351906388126:web:d13941416cd82c4d1ec38f"
- };
+  apiKey: "AIzaSyALxF102ugt9PVrtWhCrrJL3zhSm-4rePE",
+  authDomain: "blogwithlea-3826a.firebaseapp.com",
+  projectId: "blogwithlea-3826a",
+  storageBucket: "blogwithlea-3826a.appspot.com",
+  messagingSenderId: "1041116755446",
+  appId: "1:1041116755446:web:f69f508f5a89b0a724c3d7"
+};
 
-// Initialize Firebase
+
+
+module.exports = {
+  signInWithEmailAndPassword,
+  signUpWithEmailAndPassword,
+  signOut
+};
+
+
+
+
+
+
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+// const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 
-export { auth, db, storage };
+// const auth = getAuth();
+module.exports = { auth: auth, db: db, storage: storage };

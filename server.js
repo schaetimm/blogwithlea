@@ -1,3 +1,4 @@
+
 const express = require('express');
 const path = require('path');
 const fileupload = require('express-fileupload');
@@ -12,18 +13,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(initial_path, "index.html"));
 })
 
+
 app.get('/editor', (req, res) => {
     res.sendFile(path.join(initial_path, "editor.html"));
 })
 
 // upload link
-app.post('/upload', (req, res) => {
+app.post('./upload', (req, res) => {
     let file = req.files.image;
     let date = new Date();
     // image name
     let imagename = date.getDate() + date.getTime() + file.name;
     // image upload path
-    let path = 'public/uploads/' + imagename;
+    let path = 'public/upload/' + imagename;
 
     // create upload
     file.mv(path, (err, result) => {
@@ -31,7 +33,7 @@ app.post('/upload', (req, res) => {
             throw err;
         } else{
             // our image upload path
-            res.json(`uploads/${imagename}`)
+            res.json(`upload/${imagename}`)
         }
     })
 })

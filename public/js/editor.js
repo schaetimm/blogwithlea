@@ -1,3 +1,8 @@
+const auth = require('./auth');
+
+
+
+
 const blogTitleField = document.querySelector('.title');
 const articleFeild = document.querySelector('.article');
 
@@ -16,6 +21,35 @@ bannerImage.addEventListener('change', () => {
 uploadInput.addEventListener('change', () => {
     uploadImage(uploadInput, "image");
 })
+
+
+
+
+
+
+// Sign in with email and password
+// const email = 'user@example.com';
+// const password = 'password';
+
+signInWithEmailAndPassword(email, password)
+    .then((user) => {
+        console.log(user);
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+
+// Sign up with email and password
+signUpWithEmailAndPassword(email, password)
+    .then((user) => {
+        console.log(user);
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+
+
+
 
 const uploadImage = (uploadFile, uploadType) => {
     const [file] = uploadFile.files;
